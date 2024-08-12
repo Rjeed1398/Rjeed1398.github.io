@@ -1,69 +1,46 @@
 /*www.almasweb.org*/
-const { useState } = React;
 
-const AddTaskForm = ({ addTask }) => {
-  const [value, setValue] = useState("");
+function showLogin() {
+  $(".login-link").addClass("active");
+  $(".signup-link").removeClass("active");
+  $(".btn-login").text("ورود");
+  $(".confirm-password-row").hide()
+  $(".forgot-password-row").show();
+}
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    value && addTask(value);
-    setValue("");
+function showSignup() {
+  $(".login-link").removeClass("active");
+  $(".signup-link").addClass("active");
+  $(".btn-login").text("عضویت");
+  $(".confirm-password-row").show()
+  $(".forgot-password-row").hide();
+}
+
+function checkPasswordStrength() {
+  if (!$("#password").val() || $(".login-link").hasClass("active")) return;
+
+  const emoji = {
+    0: "\u{1F628}", // Fearful 
+    1: "\u{1F616}", // Confounded 
+    2: "\u{1F61E}", // Disappointed 
+    3: "\u{1F615}", // Confused 
+    4: "\u{1F603}" // Grinning 
   };
+  const result = zxcvbn($("#password").val());
+  const warning = result.feedback.warning || "";
+  const suggestion = result.feedback.suggestions.join(", ").replace(/,/g, "") || "";
+  
+  $("#password-strength").html(emoji[result.score]);
+  $(".help-text").text(`سعی کنید پسوردتان بهتر شود !`);
+}
 
-  return (
-    React.createElement("form", { onSubmit: handleSubmit },
-    React.createElement("input", {
-      type: "text",
-      value: value,
-      placeholder: "\u06CC\u06A9 \u0639\u0646\u0648\u0627\u0646 \u0648\u0627\u0631\u062F \u06A9\u0646\u06CC\u062F",
-      onChange: e => setValue(e.target.value) }),
+function init() {
+  $(".login-link").on("click", showLogin);
+  $(".signup-link").on("click", showSignup);
+  $("#password")
+    .on("input focus", checkPasswordStrength)
+    .on("blur", () => $("#password-strength, .help-text").empty());
+}
 
-    React.createElement("button", { type: "submit" }, React.createElement("i", { class: "fas fa-plus" }))));
-
-
-};
-
-const ToDoList = () => {
-
-  const [tasks, setTasks] = useState([{
-    text: "لایک",
-    isCompleted: false },
-  {
-    text: "کامنت",
-    isCompleted: false },
-  {
-    text: "اشتراک گزاری",
-    isCompleted: false }]);
-
-
-  const addTask = text => setTasks([...tasks, { text }]);
-
-  const toggleTask = index => {
-    const newTasks = [...tasks];
-    newTasks[index].isCompleted = !newTasks[index].isCompleted;
-    setTasks(newTasks);
-  };
-
-  const removeTask = index => {
-    const newTasks = [...tasks];
-    newTasks.splice(index, 1);
-    setTasks(newTasks);
-  };
-
-  return (
-    React.createElement("div", { className: "todo-list" },
-    tasks.map((task, index) =>
-    React.createElement("div", { className: "todo" },
-    React.createElement("span", { onClick: () => toggleTask(index), className: task.isCompleted ? "todo-text todo-completed" : "todo-text" },
-    task.text),
-
-    React.createElement("button", { onClick: () => removeTask(index) }, React.createElement("i", { class: "fas fa-trash-alt" })))),
-
-
-    React.createElement(AddTaskForm, { addTask: addTask })));
-
-
-};
-
-ReactDOM.render(React.createElement(ToDoList, null), document.getElementById('app'));
+$(init);
 /*www.almasweb.org*/
