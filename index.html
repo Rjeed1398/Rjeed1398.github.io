@@ -1,65 +1,267 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>فرم ورود و عضویت متریال</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css'>
-  <link href="https://fonts.googleapis.com/css?family=Markazi+Text" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rjeed Portfolio</title>
+    
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-    <!--www.almasweb.org-->
-  <div class="container">
-  <div class="row">
-    <div class="col s12 m6 offset-m3">
-      <div class="card hoverable">
-        <div class="card-content grey-text text-lighten-1">
-          <div class="row card-title">
-            <div class="col s6 left-align login-link"><span>ورود</span></div>
-            <div class="col s6 right-align signup-link active"><span>عضو شوید</span></div>
-          </div>
-          <div class="row">
-            <div class="input-field email-field col s12">
-              <input id="email" type="email" class="validate white-text">
-              <label for="email" class="grey-text text-lighten-1">ایمیل</label>
-            </div>
-          </div>
-          <div class="row">
-            <form action="." class="col s12 password-form" autocomplete="nope">
-              <div class="row">
-                <div class="input-field password-field col s12">
-                  <input id="password" type="password" class="validate">
-                  <span id="password-strength"></span>
-                  <label for="password">پسورد</label>
-                  <p class="help-text"></p>
-                </div>
-              </div>
-              <div class="row confirm-password-row">
-                <div class="input-field confirm-password-field col s12">
-                 <input id="confirm-password" type="password" class="validate">
-                 <label for="confirm-password">تایید پسورد</label>
-               </div>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="card-action center-align">
-          <div class="row">
-            <a class="btn-login btn amber darken-4 waves-effect white-text">ورود</a>
-          </div>
-          <div class="row forgot-password-row">
-            <span class="amber-text text-darken-4 waves-effect">پسوردتان را فراموش کردید ؟</span>
-          </div>
-        </div>
-      </div>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <div class="user">
+        <img src="images/profile.jpg" alt="Profile Picture">
+        <h3 class="name">Rjeed</h3>
+        <h2 class="nickname">(Scott)</h3>
+        <p class="post">Backend & Web Developer</p>
     </div>
-  </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#education">education</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<div id="menu" class="fas fa-bars"></div>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <h3>Hi, There !</h3>
+    <h1><span>I'm Rjeed</span></h1>
+    <p>A professional Backend developer & Web developer. I completed several courses in HTML, CSS, Python, SQL, PHP. Aso I have coding skills in c++, java & C# programming language. 
+
+    </p>
+    <a href="#about"><button class="btn">about me <i class="fas fa-user"></i></button></a>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+<h1 class="heading"> <span>about</span> me </h1>
+
+<div class="row">
+
+    <div class="info">
+        <h3> <span> name : </span> Mohamad Taha Taheri </h3>
+        <h3> <span> age : </span> 17 </h3>
+        <h3> <span> qualification : </span> intern dana </h3>
+        <h3> <span> post : </span> Backend developer </h3>
+        <h3> <span> language : </span> فارسی, English, 日本語 </h3>
+        <a href="https://www.facebook.com/freewebsitecode/"><button class="btn"><i class="fab fa-facebook-f"></i> Follow </button></a>
+    </div>
+
+    <div class="counter">
+
+        <div class="box">
+            <span>4+</span>
+            <h3>years of experience</h3>
+        </div>
+
+        <div class="box">
+            <span>10+</span>
+            <h3>porject completed</h3>
+        </div>
+
+        <div class="box">
+            <span>15+</span>
+            <h3>happy clients</h3>
+        </div>
+
+        <div class="box">
+            <span>5+</span>
+            <h3>awards won</h3>
+        </div>
+
+    </div>
+
 </div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js'></script>
-    <script  src="index.js"></script>
-        <!--www.almasweb.org-->
+
+</section>
+
+<!-- about section ends -->
+
+<!-- education section starts  -->
+
+<section class="education" id="education">
+
+<h1 class="heading"> my <span>education</span> </h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <i class="fas fa-graduation-cap"></i>
+        <span>2016</span>
+        <h3>Completed (O) Level</h3>
+        <p>It was a 10-years journey of my high school life. Completed (o) level from science dept. Got GPA: 5. 0 out of 5. 00</p>
+    </div>
+
+    <div class="box">
+        <i class="fas fa-graduation-cap"></i>
+        <span>2019</span>
+        <h3>Completed (A) Level</h3>
+        <p>It was wonderfull time in my life. Finally completed (a) level  also from science dept. Got GPA: 5. 00 out of 5. 00 & it's the stage of my life. </p>
+    </div>
+
+    <div class="box">
+        <i class="fas fa-graduation-cap"></i>
+        <span>2019</span>
+        <h3>B.Sc in CSE</h3>
+        <p>After the (A) level exam, i  get good subjects from my science dept. And finally i have to keep up my study so i got admission in b. Sc in cse. I feel happy cause it's helped me to find job. </p>
+    </div>
+
+    <div class="box">
+        <i class="fas fa-graduation-cap"></i>
+        <span>2019</span>
+        <h3>Fontend Web Developer</h3>
+        <p>After getting admission to B.Sc in CSE. I have done courses in HTML, CSE & javascript and got quite better skills & joined as a front-end web developer. There I learned practically to build a website project.  </p>
+    </div>
+
+    <div class="box">
+        <i class="fas fa-graduation-cap"></i>
+        <span>2018</span>
+        <h3>Backend Web Developer</h3>
+        <p>I was always interested with it world. That was my inspiration to complete php, mysql etc. Now i am certified web developer & wordpress expert. Now i am doing regularly practice of my work. </p>
+    </div>
+
+    <div class="box">
+        <i class="fas fa-graduation-cap"></i>
+        <span>2016</span>
+        <h3>Graphics Design</h3>
+        <p>I started my graphics course at my home after seeing so many tutorials. I am now an expert in vector & logo design work. I am skilled in photoshop & illustrator & so on I learned from my home by the good will of the internet.</p>
+    </div>
+
+</div>
+
+</section>
+
+<!-- education section ends -->
+
+<!-- portfolio section starts  -->
+
+<section class="portfolio" id="portfolio">
+
+<h1 class="heading"> my <span>portfolio</span> </h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <img src="images/1.jpeg" alt="">
+    </div>
+
+    <div class="box">
+        <img src="images/2.jpg" alt="">
+    </div>
+
+    <div class="box">
+        <img src="images/3.jpg" alt="">
+    </div>
+
+    <div class="box">
+        <img src="images/4.jpg" alt="">
+    </div>
+
+    <div class="box">
+        <img src="images/5.png" alt="">
+    </div>
+
+    <div class="box">
+        <img src="images/6.jpg" alt="">
+    </div>
+
+</div>
+
+</section>
+
+<!-- portfolio section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+<h1 class="heading"> <span>contact</span> me </h1>
+
+<div class="row">
+
+    <div class="content">
+
+        <h3 class="title">contact info</h3>
+
+        <div class="info">
+            <h3 class="lower"> <i class="fas fa-envelope"></i> service@freewebsitecode.com </h3>
+            <h3> <i class="fas fa-phone"></i> +98-937***2297 </h3>
+            <h3> <i class="fas fa-phone"></i> +98-920***6479 </h3>
+            <h3> <i class="fas fa-map-marker-alt"></i> Tehtan, IRAN. </h3>
+        </div>
+
+    </div>
+
+    <form action="">
+
+        <input type="text" placeholder="name" class="box">
+        <input type="email" placeholder="email" class="box">
+        <input type="text" placeholder="project" class="box">
+        <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
+        <button type="submit" class="btn"> send <i class="fas fa-paper-plane"></i> </button>
+
+    </form>
+
+</div>
+
+</section>
+
+<!-- contact section ends -->
+
+
+<!-- scroll top button  -->
+
+<a href="#home" class="top">
+    <img src="images/scroll.png" alt="Scroll For Top">
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+
 </body>
 </html>
