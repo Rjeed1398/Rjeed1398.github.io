@@ -22,7 +22,7 @@
     <div class="user">
         <img src="images/profile.jpg" alt="Profile Picture">
         <h3 class="name">Rjeed</h3>
-        <h2 class="nickname">(Scott)</h3>
+        <h2 class="nickname">(Jey)</h3>
         <p class="post">Backend & Web Developer</p>
     </div>
 
@@ -30,7 +30,7 @@
         <ul>
             <li><a href="#home">home</a></li>
             <li><a href="#about">about</a></li>
-            <li><a href="#education">education</a></li>
+            <li><a href="#social">social</a></li>
             <li><a href="#portfolio">portfolio</a></li>
             <li><a href="#contact">contact</a></li>
         </ul>
@@ -48,7 +48,7 @@
 
     <h3>Hi, There !</h3>
     <h1><span>I'm Rjeed</span></h1>
-    <p>A professional Backend developer & Web developer. I completed several courses in HTML, CSS, Python, SQL, PHP. Aso I have coding skills in c++, java & C# programming language. 
+    <p>A professional Backend developer & Web developer. I completed several courses in HTML, CSS, Python, SQL, PHP. Aso I have coding skills in c++, java & C# programming language. By the way, I also work on YouTube and am a video editor, and I'm good at Photoshop.
 
     </p>
     <a href="#about"><button class="btn">about me <i class="fas fa-user"></i></button></a>
@@ -67,11 +67,30 @@
 
     <div class="info">
         <h3> <span> name : </span> Mohamad Taha Taheri </h3>
-        <h3> <span> age : </span> 17 </h3>
-        <h3> <span> qualification : </span> intern dana </h3>
+        <h3> <span> age : </span> <span id="age", style="color:#00ce79"></span> </h3>
+        <script>
+        // birthDate
+        const birthDate = new Date("2006-10-04"); // yyyy-mm-dd
+
+        function calculateAge(birth) {
+          const today = new Date();
+          let age = today.getFullYear() - birth.getFullYear();
+
+          const hasBirthdayPassed = 
+            today.getMonth() > birth.getMonth() ||
+            (today.getMonth() === birth.getMonth() && today.getDate() >= birth.getDate());
+
+          if (!hasBirthdayPassed) {
+            age--;
+          }
+          return age;
+        }
+
+        document.getElementById("age").textContent = calculateAge(birthDate);
+        </script>
+        <h3> <span> qualification : </span> Pre college </h3>
         <h3> <span> post : </span> Backend developer </h3>
         <h3> <span> language : </span> فارسی, English, 日本語 </h3>
-        <a href="https://www.youtube.com/channel/UC7qJs9rojUznM4h08d6foEA"><button class="btn"><i class="fab fa-facebook-f"></i> Follow </button></a>
     </div>
 
     <div class="counter">
@@ -104,11 +123,11 @@
 
 <!-- about section ends -->
 
-<!-- education section starts  -->
+<!-- social section starts  -->
 
-<section class="education" id="education">
+<section class="social" id="social">
 
-<h1 class="heading"> my <span>education</span> </h1>
+<h1 class="heading"> my <span>social</span> </h1>
 
 <div class="box-container">
 
@@ -158,7 +177,7 @@
 
 </section>
 
-<!-- education section ends -->
+<!-- social section ends -->
 
 <!-- portfolio section starts  -->
 
@@ -212,8 +231,8 @@
 
         <div class="info">
             <h3 class="lower"> <i class="fas fa-envelope"></i> tahagamer1398@gmail.com </h3>
-            <h3> <i class="fas fa-phone"></i> +98-937***2297 </h3>
-            <h3> <i class="fas fa-phone"></i> +98-920***6479 </h3>
+            <h3> <i class="fas fa-phone"></i> +98-912***6789 </h3>
+            <h3> <i class="fas fa-phone"></i> +98-912***6897 </h3>
             <h3> <i class="fas fa-map-marker-alt"></i> Tehtan, IRAN. </h3>
         </div>
 
@@ -225,7 +244,7 @@
         <input type="email" placeholder="email" class="box">
         <input type="text" placeholder="project" class="box">
         <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
-        <button type="submit" class="btn"> send <i class="fas fa-paper-plane"></i> </button>
+        <button type="submit" class="btn"> send <i class="fas fa-paper-plane"></i> (البته کار نمیکنه) </button>
 
     </form>
 
